@@ -1,123 +1,27 @@
-<!DOCTYPE html>
-<html lang="gr">
-<head>
-  <meta charset="UTF-8" />
-  <title>HVG & partners — Επικοινωνία / Contacts / Контакти</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
+<div class="contact-card">
+  <h2 class="contact-title">Contact Us</h2>
 
-<body>
-
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container header-inner">
-
-      <div class="logo">
-        <img src="img/logo.png" alt="HVG & partners" />
-      </div>
-
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html">Ο εταιρεία / Company / Компанія</a></li>
-          <li><a href="vending.html">Vending άρωμα / Perfume Vending / Вендинг парфюм</a></li>
-          <li><a href="partners.html">Συνεργάτες / Partners / Партнерам</a></li>
-          <li><a href="contacts.html">Επικοινωνία / Contacts / Контакти</a></li>
-        </ul>
-      </nav>
-
-      <div class="lang-switch">
-        <a data-lang="gr">GR</a>
-        <a data-lang="en">EN</a>
-        <a data-lang="ua">UA</a>
-      </div>
-
-    </div>
-  </header>
-
-  <!-- MAIN -->
-  <main class="page" id="contacts">
-
-    <!-- GR -->
-    <div class="lang lang-gr">
-      <section class="section">
-        <div class="container">
-          <h1>Επικοινωνία</h1>
-
-          <p><strong>Τηλέφωνο:</strong> +306982125427, +306971941516</p>
-          <p><strong>Email:</strong> hvgpartners.gr@gmail.com</p>
-          <p><strong>Διεύθυνση:</strong> Αθήνα, Πειραιάς (Αττική)</p>
-
-          <h2>Φόρμα επικοινωνίας</h2>
-
-          <form class="contact-form">
-            <input type="text" placeholder="Όνομα" required>
-            <input type="text" placeholder="Εταιρεία" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Σχόλιο" required></textarea>
-            <button type="submit">Αποστολή</button>
-          </form>
-        </div>
-      </section>
+  <form class="contact-form-premium">
+    <div class="input-group">
+      <label>Name</label>
+      <input type="text" placeholder="Your name" required>
     </div>
 
-    <!-- EN -->
-    <div class="lang lang-en" style="display:none;">
-      <section class="section">
-        <div class="container">
-          <h1>Contacts</h1>
-
-          <p><strong>Phone:</strong> +306982125427, +306971941516</p>
-          <p><strong>Email:</strong> hvgpartners.gr@gmail.com</p>
-          <p><strong>Address:</strong> Athens, Piraeus (Attica)</p>
-
-          <h2>Contact form</h2>
-
-          <form class="contact-form">
-            <input type="text" placeholder="Name" required>
-            <input type="text" placeholder="Company" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Comment" required></textarea>
-            <button type="submit">Send</button>
-          </form>
-        </div>
-      </section>
+    <div class="input-group">
+      <label>Company</label>
+      <input type="text" placeholder="Company name" required>
     </div>
 
-    <!-- UA -->
-    <div class="lang lang-ua" style="display:none;">
-      <section class="section">
-        <div class="container">
-          <h1>Контакти</h1>
-
-          <p><strong>Телефон:</strong> +306982125427, +306971941516</p>
-          <p><strong>Email:</strong> hvgpartners.gr@gmail.com</p>
-          <p><strong>Адреса:</strong> Афіни, Пірей (Аттика)</p>
-
-          <h2>Форма зворотного зв’язку</h2>
-
-          <form class="contact-form">
-            <input type="text" placeholder="Ім’я" required>
-            <input type="text" placeholder="Компанія" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Коментар" required></textarea>
-            <button type="submit">Надіслати</button>
-          </form>
-        </div>
-      </section>
+    <div class="input-group">
+      <label>Email</label>
+      <input type="email" placeholder="email@example.com" required>
     </div>
 
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© HVG & partners, Greece</p>
+    <div class="input-group">
+      <label>Message</label>
+      <textarea placeholder="Write your message..." required></textarea>
     </div>
-  </footer>
 
-  <script src="js/lang.js"></script>
-  <script src="js/ui.js"></script>
-
-</body>
-</html>
+    <button type="submit" class="contact-btn">Send Message</button>
+  </form>
+</div>
