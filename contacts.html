@@ -1,217 +1,207 @@
-<link rel="stylesheet" href="css/styles.css" />
 <!DOCTYPE html>
 <html lang="gr">
 <head>
   <meta charset="UTF-8" />
-  <title>HVG & partners — Contacts</title>
+  <title>HVG & Partners — Contacts</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
 
-<header class="site-header">
-  <div class="container header-inner">
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
 
-    <div class="logo">
-      <img src="img/logo.png" alt="HVG & partners">
+      <div class="logo">
+        <img src="img/logo.png" alt="HVG & partners" />
+      </div>
+
+      <div class="lang-switch">
+        <button data-lang="gr">GR</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="ua">UA</button>
+      </div>
+
     </div>
+  </header>
 
-    <!-- GR MENU -->
+  <main class="page" id="contacts">
+
+    <!-- ===================== GREEK ===================== -->
     <div class="lang lang-gr">
+
       <nav class="main-nav">
-        <ul>
-          <li><a href="index.html">Ο εταιρεία</a></li>
-          <li><a href="vending.html">Vending άρωμα</a></li>
-          <li><a href="partners.html">Συνεργάτες</a></li>
-          <li><a href="contacts.html">Επικοινωνία</a></li>
-        </ul>
+        <a href="index.html">Ο εταιρεία</a>
+        <a href="vending.html">Vending άρωμα</a>
+        <a href="partners.html">Συνεργάτες</a>
+        <a href="contacts.html" class="active">Επικοινωνία</a>
       </nav>
+
+      <section class="section">
+        <div class="container">
+
+          <h1>Επικοινωνία</h1>
+
+          <p><strong>Τηλέφωνο:</strong> +30 6982125427, +30 6971941516</p>
+          <p><strong>Email:</strong> hvgpartners.gr@gmail.com</p>
+          <p><strong>Διεύθυνση:</strong> Αθήνα, Πειραιάς (Αττική)</p>
+
+          <div class="contact-card">
+            <h2 class="contact-title">Φόρμα επικοινωνίας</h2>
+
+            <form action="https://formspree.io/f/xdarrqoo" method="POST">
+
+              <input type="hidden" name="_subject" value="New message from HVG Partners website">
+
+              <div class="input-group">
+                <label>Όνομα</label>
+                <input type="text" name="name" placeholder="Το όνομά σας" required>
+              </div>
+
+              <div class="input-group">
+                <label>Εταιρεία</label>
+                <input type="text" name="company" placeholder="Όνομα εταιρείας" required>
+              </div>
+
+              <div class="input-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="email@example.com" required>
+              </div>
+
+              <div class="input-group">
+                <label>Μήνυμα</label>
+                <textarea name="message" placeholder="Γράψτε το μήνυμά σας..." required></textarea>
+              </div>
+
+              <button type="submit" class="contact-btn">Αποστολή</button>
+            </form>
+          </div>
+
+        </div>
+      </section>
     </div>
 
-    <!-- EN MENU -->
+    <!-- ===================== ENGLISH ===================== -->
     <div class="lang lang-en" style="display:none;">
+
       <nav class="main-nav">
-        <ul>
-          <li><a href="index.html">Company</a></li>
-          <li><a href="vending.html">Perfume Vending</a></li>
-          <li><a href="partners.html">Partners</a></li>
-          <li><a href="contacts.html">Contacts</a></li>
-        </ul>
+        <a href="index.html">Company</a>
+        <a href="vending.html">Vending</a>
+        <a href="partners.html">Partners</a>
+        <a href="contacts.html" class="active">Contacts</a>
       </nav>
+
+      <section class="section">
+        <div class="container">
+
+          <h1>Contacts</h1>
+
+          <p><strong>Phone:</strong> +30 6982125427, +30 6971941516</p>
+          <p><strong>Email:</strong> hvgpartners.gr@gmail.com</p>
+          <p><strong>Address:</strong> Athens, Piraeus (Attica)</p>
+
+          <div class="contact-card">
+            <h2 class="contact-title">Contact Form</h2>
+
+            <form action="https://formspree.io/f/xdarrqoo" method="POST">
+
+              <input type="hidden" name="_subject" value="New message from HVG Partners website">
+
+              <div class="input-group">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Your name" required>
+              </div>
+
+              <div class="input-group">
+                <label>Company</label>
+                <input type="text" name="company" placeholder="Company name" required>
+              </div>
+
+              <div class="input-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="email@example.com" required>
+              </div>
+
+              <div class="input-group">
+                <label>Message</label>
+                <textarea name="message" placeholder="Write your message..." required></textarea>
+              </div>
+
+              <button type="submit" class="contact-btn">Send Message</button>
+            </form>
+          </div>
+
+        </div>
+      </section>
     </div>
 
-    <!-- UA MENU -->
+    <!-- ===================== UKRAINIAN ===================== -->
     <div class="lang lang-ua" style="display:none;">
+
       <nav class="main-nav">
-        <ul>
-          <li><a href="index.html">Компанія</a></li>
-          <li><a href="vending.html">Вендінг парфюм</a></li>
-          <li><a href="partners.html">Партнерам</a></li>
-          <li><a href="contacts.html">Контакти</a></li>
-        </ul>
+        <a href="index.html">Компанія</a>
+        <a href="vending.html">Вендінг</a>
+        <a href="partners.html">Партнерам</a>
+        <a href="contacts.html" class="active">Контакти</a>
       </nav>
+
+      <section class="section">
+        <div class="container">
+
+          <h1>Контакти</h1>
+
+          <p><strong>Телефон:</strong> +30 6982125427, +30 6971941516</p>
+          <p><strong>Email:</strong> hvgpartners.gr@gmail.com</p>
+          <p><strong>Адреса:</strong> Афіни, Пірей (Аттика)</p>
+
+          <div class="contact-card">
+            <h2 class="contact-title">Форма зворотного зв’язку</h2>
+
+            <form action="https://formspree.io/f/xdarrqoo" method="POST">
+
+              <input type="hidden" name="_subject" value="New message from HVG Partners website">
+
+              <div class="input-group">
+                <label>Ім’я</label>
+                <input type="text" name="name" placeholder="Ваше ім’я" required>
+              </div>
+
+              <div class="input-group">
+                <label>Компанія</label>
+                <input type="text" name="company" placeholder="Назва компанії" required>
+              </div>
+
+              <div class="input-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="email@example.com" required>
+              </div>
+
+              <div class="input-group">
+                <label>Повідомлення</label>
+                <textarea name="message" placeholder="Ваше повідомлення..." required></textarea>
+              </div>
+
+              <button type="submit" class="contact-btn">Надіслати</button>
+            </form>
+          </div>
+
+        </div>
+      </section>
     </div>
 
-    <div class="lang-switch">
-      <button data-lang="gr">GR</button>
-      <button data-lang="en">EN</button>
-      <button data-lang="ua">UA</button>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© HVG & partners, Greece</p>
     </div>
+  </footer>
 
-  </div>
-</header>
-
-<main class="page" id="contacts">
-
-  <!-- ================= GR ================= -->
-  <div class="lang lang-gr">
-    <section class="section">
-      <div class="container">
-
-        <h1>Επικοινωνία</h1>
-
-        <p><strong>Τηλέφωνο:</strong> +306982125427, +306971941516</p>
-        <p><strong>Email:</strong> hvgpartners.gr@gmail.com</p>
-        <p><strong>Διεύθυνση:</strong> Αθήνα, Πειραιάς (Αττική)</p>
-
-        <div class="contact-card">
-          <h2 class="contact-title">Φόρμα επικοινωνίας</h2>
-
-          <form class="contact-form-premium" action="https://formspree.io/f/xdarrqoo" method="POST">
-
-            <input type="hidden" name="_subject" value="New message from HVG Partners website">
-
-            <div class="input-group">
-              <label>Όνομα</label>
-              <input type="text" name="name" placeholder="Το όνομά σας" required>
-            </div>
-
-            <div class="input-group">
-              <label>Εταιρεία</label>
-              <input type="text" name="company" placeholder="Όνομα εταιρείας" required>
-            </div>
-
-            <div class="input-group">
-              <label>Email</label>
-              <input type="email" name="email" placeholder="email@example.com" required>
-            </div>
-
-            <div class="input-group">
-              <label>Μήνυμα</label>
-              <textarea name="message" placeholder="Γράψτε το μήνυμά σας..." required></textarea>
-            </div>
-
-            <button type="submit" class="contact-btn">Αποστολή</button>
-          </form>
-        </div>
-
-      </div>
-    </section>
-  </div>
-
-  <!-- ================= EN ================= -->
-  <div class="lang lang-en" style="display:none;">
-    <section class="section">
-      <div class="container">
-
-        <h1>Contacts</h1>
-
-        <p><strong>Phone:</strong> +306982125427, +306971941516</p>
-        <p><strong>Email:</strong> hvgpartners.gr@gmail.com</p>
-        <p><strong>Address:</strong> Athens, Piraeus (Attica)</p>
-
-        <div class="contact-card">
-          <h2 class="contact-title">Contact Form</h2>
-
-          <form class="contact-form-premium" action="https://formspree.io/f/xdarrqoo" method="POST">
-
-            <input type="hidden" name="_subject" value="New message from HVG Partners website">
-
-            <div class="input-group">
-              <label>Name</label>
-              <input type="text" name="name" placeholder="Your name" required>
-            </div>
-
-            <div class="input-group">
-              <label>Company</label>
-              <input type="text" name="company" placeholder="Company name" required>
-            </div>
-
-            <div class="input-group">
-              <label>Email</label>
-              <input type="email" name="email" placeholder="email@example.com" required>
-            </div>
-
-            <div class="input-group">
-              <label>Message</label>
-              <textarea name="message" placeholder="Write your message..." required></textarea>
-            </div>
-
-            <button type="submit" class="contact-btn">Send Message</button>
-          </form>
-        </div>
-
-      </div>
-    </section>
-  </div>
-
-  <!-- ================= UA ================= -->
-  <div class="lang lang-ua" style="display:none;">
-    <section class="section">
-      <div class="container">
-
-        <h1>Контакти</h1>
-
-        <p><strong>Телефон:</strong> +306982125427, +306971941516</p>
-        <p><strong>Email:</strong> hvgpartners.gr@gmail.com</p>
-        <p><strong>Адреса:</strong> Афіни, Пірей (Аттика)</p>
-
-        <div class="contact-card">
-          <h2 class="contact-title">Форма зворотного зв’язку</h2>
-
-          <form class="contact-form-premium" action="https://formspree.io/f/xdarrqoo" method="POST">
-
-            <input type="hidden" name="_subject" value="New message from HVG Partners website">
-
-            <div class="input-group">
-              <label>Ім’я</label>
-              <input type="text" name="name" placeholder="Ваше ім’я" required>
-            </div>
-
-            <div class="input-group">
-              <label>Компанія</label>
-              <input type="text" name="company" placeholder="Назва компанії" required>
-            </div>
-
-            <div class="input-group">
-              <label>Email</label>
-              <input type="email" name="email" placeholder="email@example.com" required>
-            </div>
-
-            <div class="input-group">
-              <label>Коментар</label>
-              <textarea name="message" placeholder="Ваше повідомлення..." required></textarea>
-            </div>
-
-            <button type="submit" class="contact-btn">Надіслати</button>
-          </form>
-        </div>
-
-      </div>
-    </section>
-  </div>
-
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <p>© HVG & partners, Greece</p>
-  </div>
-</footer>
-
-<script src="js/lang.js"></script>
-<script src="js/ui.js"></script>
+  <script src="js/lang.js"></script>
+  <script src="js/ui.js"></script>
 
 </body>
 </html>
+
