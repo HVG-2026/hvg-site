@@ -2,393 +2,115 @@
 <html lang="gr">
 <head>
   <meta charset="UTF-8" />
-  <title>HVG Partners</title>
+  <title>HVG & Partners — Innovative Vending Solutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-</div>
-<audio id="boot-sound" src="boot.mp3"></audio>
 
 <body>
-<div id="splash">
-    <img src="logo.png" alt="HVG Partners" class="splash-logo">
-</div>
 
-<div id="site-content" style="display:none;">
+  <!-- BOOT SOUND -->
+  <audio id="boot-sound" src="boot.mp3"></audio>
 
-  <!-- ЛОГОТИП -->
-  <div class="logo"></div>
-    <div class="circle circle-left"></div>
-    <div class="circle circle-right"></div>
+  <!-- SPLASH SCREEN -->
+  <div id="splash">
+    <div class="splash-inner">
+      <img src="img/logo.png" alt="HVG Partners" class="splash-logo">
+      <div class="loader">
+        <div class="circle circle-left"></div>
+        <div class="circle circle-right"></div>
+      </div>
+    </div>
   </div>
 
-  <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ -->
-  <div class="lang-switch">
-    <button data-lang="gr">GR</button>
-    <button data-lang="en">EN</button>
-    <button data-lang="ua">UA</button>
-  </div>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
 
+      <div class="logo">
+        <img src="img/logo.png" alt="HVG & partners" />
+      </div>
 
-  <!-- ========================= -->
-  <!-- 1. О КОМПАНИИ -->
-  <!-- ========================= -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Ο εταιρεία / Company / Компанія</a></li>
+          <li><a href="vending.html">Vending άρωμα / Perfume Vending / Вендинг парфюм</a></li>
+          <li><a href="partners.html">Συνεργάτες / Partners / Партнерам</a></li>
+          <li><a href="contacts.html">Επικοινωνία / Contacts / Контакти</a></li>
+        </ul>
+      </nav>
 
-  <!-- GR -->
-  <section class="lang lang-gr info-block">
-    <h2>Η εταιρεία</h2>
+      <div class="lang-switch">
+        <a data-lang="gr">GR</a>
+        <a data-lang="en">EN</a>
+        <a data-lang="ua">UA</a>
+      </div>
 
-    <div class="slogan">
-      <p>Παρτενέρικες λύσεις για επιχειρήσεις</p>
-      <p>Στρατηγική. Αξιοπιστία. Αποτέλεσμα.</p>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="page" id="company">
+
+    <!-- GREEK -->
+    <div class="lang lang-gr">
+      <section class="section">
+        <div class="container">
+          <h1>HVG & partners — καινοτόμες λύσεις για επιχειρήσεις στην Ελλάδα</h1>
+          <p>Εφαρμογή σύγχρονων τεχνολογιών vending και νέων μορφών εξυπηρέτησης.</p>
+
+          <h2>Ο εταιρεία</h2>
+          <p>
+            Η HVG & partners δραστηριοποιείται στην Ελλάδα και ειδικεύεται στην εφαρμογή
+            σύγχρονων λύσεων vending για επιχειρήσεις.
+          </p>
+        </div>
+      </section>
     </div>
 
-    <div class="info-content">
-      <p>
-        Η HVG Partners είναι μια εταιρεία που εφαρμόζει καινοτόμες λύσεις vending για επιχειρήσεις.
-        Αναπτύσσουμε ολοκληρωμένες έννοιες αυτοματοποιημένης εξυπηρέτησης: από την ιδέα και την αρχιτεκτονική
-        του προϊόντος έως τη λογική αλληλεπίδρασης με τον πελάτη και την ενσωμάτωση στην υποδομή του συνεργάτη.
-      </p>
+    <!-- ENGLISH -->
+    <div class="lang lang-en" style="display:none;">
+      <section class="section">
+        <div class="container">
+          <h1>HVG & partners — innovative business solutions in Greece</h1>
+          <p>Implementation of modern vending technologies and new service formats.</p>
 
-      <p>
-        Οι λύσεις μας βοηθούν τις επιχειρήσεις να αυξήσουν τη ροή πελατών, να βελτιώσουν την ποιότητα
-        εξυπηρέτησης και να δημιουργήσουν νέες μορφές monetization χωρίς τη συμμετοχή προσωπικού.
-      </p>
-    </div>
-  </section>
-
-  <!-- EN -->
-  <section class="lang lang-en info-block" style="display:none;">
-    <h2>About the company</h2>
-
-    <div class="slogan">
-      <p>Partner solutions for business</p>
-      <p>Strategy. Reliability. Result.</p>
+          <h2>About the company</h2>
+          <p>
+            HVG & partners operates in Greece and specializes in implementing modern
+            vending solutions for businesses.
+          </p>
+        </div>
+      </section>
     </div>
 
-    <div class="info-content">
-      <p>
-        HVG Partners is a company implementing innovative vending solutions for businesses.
-        We develop comprehensive concepts of automated service: from product idea and architecture
-        to customer interaction logic and integration into the partner’s infrastructure.
-      </p>
+    <!-- UKRAINIAN -->
+    <div class="lang lang-ua" style="display:none;">
+      <section class="section">
+        <div class="container">
+          <h1>HVG & partners — інноваційні рішення для бізнесу в Греції</h1>
+          <p>Впровадження сучасних вендингових технологій та нових форматів сервісу.</p>
 
-      <p>
-        Our solutions help businesses increase customer flow, improve service quality,
-        and create new monetization formats without staff involvement.
-      </p>
-    </div>
-  </section>
-
-  <!-- UA -->
-  <section class="lang lang-ua info-block" style="display:none;">
-    <h2>Про компанію</h2>
-
-    <div class="slogan">
-      <p>Партнерські рішення для бізнесу</p>
-      <p>Стратегія. Надійність. Результат.</p>
+          <h2>Про компанію</h2>
+          <p>
+            HVG & partners працює на ринку Греції та спеціалізується на впровадженні
+            сучасних вендингових рішень для бізнесу.
+          </p>
+        </div>
+      </section>
     </div>
 
-    <div class="info-content">
-      <p>
-        HVG Partners — компанія, що впроваджує інноваційні вендингові рішення для бізнесу.
-        Ми розробляємо комплексні концепції автоматизованого обслуговування: від ідеї та архітектури продукту
-        до логіки взаємодії з клієнтом і інтеграції в інфраструктуру партнера.
-      </p>
+  </main>
 
-      <p>
-        Наші рішення допомагають бізнесу збільшувати потік клієнтів, підвищувати якість сервісу
-        та створювати нові формати монетизації без участі персоналу.
-      </p>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© HVG & partners, Greece</p>
     </div>
-  </section>
+  </footer>
 
+  <script src="js/lang.js"></script>
+  <script src="js/ui.js"></script>
 
-
-  <!-- ========================= -->
-  <!-- 2. ЧТО МЫ ПРЕДЛАГАЕМ -->
-  <!-- ========================= -->
-
-  <!-- GR -->
-  <section class="lang lang-gr info-block">
-    <h2>Τι προσφέρουμε</h2>
-
-    <div class="slogan">
-      <p>Σύγχρονη εμπειρία. Νέος τρόπος αλληλεπίδρασης.</p>
-    </div>
-
-    <div class="info-content">
-      <p>
-        Προσφέρουμε μια αποκλειστική λύση για επιχειρήσεις: έναν σύγχρονο τρόπο δημιουργίας
-        πρόσθετου εισοδήματος και προσέλκυσης πελατών μέσω της εγκατάστασης αυτόματων μηχανημάτων αρώματος.
-      </p>
-
-      <p>
-        Το πρώτο μας προϊόν — τα αυτόματα μηχανήματα αρώματος HVG Perfume — επιτρέπουν στους ανθρώπους
-        να δοκιμάσουν premium αρώματα σε τιμή χαμηλότερη από μια κούπα καφέ.
-      </p>
-
-      <p>
-        Το μηχάνημα HVG Perfume προσφέρει μια άμεση και άνετη δοκιμή αρώματος — γρήγορα, εύκολα και χωρίς πίεση από πωλητές.
-        Επιλέξτε ένα γνώριμο άρωμα ή ανακαλύψτε ένα νέο — η διαδικασία διαρκεί λιγότερο από ένα λεπτό.
-      </p>
-
-      <p>
-        Γιατί είναι επίκαιρο;
-        Η Ελλάδα είναι μια χώρα με υψηλή τουριστική δραστηριότητα, ανεπτυγμένη γαστρονομική κουλτούρα
-        και πολλά σημεία ενδιαφέροντος. Τα μηχανήματα αρώματος ταιριάζουν ιδανικά σε αυτό το περιβάλλον,
-        προσφέροντας στους επισκέπτες έναν νέο τύπο mini‑αγοράς που προκαλεί ενδιαφέρον και ενισχύει τις επαναλαμβανόμενες αλληλεπιδράσεις.
-      </p>
-    </div>
-  </section>
-
-  <!-- EN -->
-  <section class="lang lang-en info-block" style="display:none;">
-    <h2>What we offer</h2>
-
-    <div class="slogan">
-      <p>Modern experience. New customer engagement.</p>
-    </div>
-
-    <div class="info-content">
-      <p>
-        We offer an exclusive business solution: a modern format of additional revenue and customer flow
-        attraction through the installation of perfume vending machines.
-      </p>
-
-      <p>
-        Our first product — HVG Perfume vending machines — allows people to try premium fragrances
-        at a price lower than a cup of coffee.
-      </p>
-
-      <p>
-        The HVG Perfume machine provides a fast, accessible and pressure‑free way to test a fragrance.
-        Choose a familiar scent or discover a new one — the process takes less than a minute.
-      </p>
-
-      <p>
-        Why is this relevant?
-        Greece is a country with high tourist activity, a strong restaurant culture and many points of attraction.
-        Perfume vending machines fit perfectly into this market, offering guests a new mini‑purchase format
-        that sparks interest and encourages repeat interactions.
-      </p>
-    </div>
-  </section>
-
-  <!-- UA -->
-  <section class="lang lang-ua info-block" style="display:none;">
-    <h2>Що ми пропонуємо</h2>
-
-    <div class="slogan">
-      <p>Сучасний досвід. Новий формат взаємодії.</p>
-    </div>
-
-    <div class="info-content">
-      <p>
-        Ми пропонуємо ексклюзивне рішення для бізнесу: сучасний формат додаткового доходу
-        та залучення клієнтів через встановлення вендингових апаратів із парфумами.
-      </p>
-
-      <p>
-        Наш перший продукт — вендингові апарати HVG Perfume — дозволяють людям тестувати преміальні аромати
-        за ціною нижчою, ніж чашка кави.
-      </p>
-
-      <p>
-        Апарат HVG Perfume забезпечує швидкий, зручний і ненав’язливий спосіб протестувати аромат.
-        Оберіть знайомий запах або відкрийте новий — це займає менше хвилини.
-      </p>
-
-      <p>
-        Чому це актуально?
-        Греція — країна з високою туристичною активністю, розвиненою ресторанною культурою
-        та великою кількістю точок притягання. Вендингові апарати з парфумами ідеально вписуються в цей ринок,
-        пропонуючи гостям новий формат міні‑покупки, що викликає інтерес і стимулює повторні взаємодії.
-      </p>
-    </div>
-  </section>
-
-
-
-  <!-- ========================= -->
-  <!-- 3. ПАРТНЁРАМ -->
-  <!-- ========================= -->
-
-  <!-- GR -->
-  <section class="lang lang-gr info-block">
-    <h2>Για συνεργάτες</h2>
-
-    <div class="slogan">
-      <p>Νέος τρόπος προσέλκυσης πελατών</p>
-      <p>Σύγχρονη τεχνολογία. Αξιοπιστία. Αποτέλεσμα.</p>
-    </div>
-
-    <div class="info-content">
-      <p><strong>Νέος τρόπος προσέλκυσης πελατών</strong></p>
-      <p><strong>Πρόσθετη πηγή εισοδήματος</strong></p>
-      <p><strong>Σύγχρονη τεχνολογική λύση</strong></p>
-      <p><strong>Εύκολη ενσωμάτωση σε κάθε χώρο</strong></p>
-      <p><strong>Αναβάθμιση του κύρους του καταστήματος</strong></p>
-
-      <h3>Πώς λειτουργεί το HVG Perfume Point</h3>
-      <p>Ο πελάτης πλησιάζει το μηχάνημα.</p>
-      <p>Επιλέγει άρωμα — γνώριμο ή νέο.</p>
-      <p>Επιλέγει μόνος του πόσες δόσεις θέλει να αγοράσει.</p>
-      <p>Πληρώνει και λαμβάνει τις δόσεις.</p>
-      <p>Η τιμή μιας δόσης — χαμηλότερη από μια κούπα καφέ.</p>
-
-      <h3>Πού μπορεί να εγκατασταθεί</h3>
-      <ul>
-        <li>εστιατόρια</li>
-        <li>μπαρ</li>
-        <li>καφέ</li>
-        <li>επιχειρηματικά κέντρα</li>
-        <li>ξενοδοχεία</li>
-        <li>γυμναστήρια</li>
-      </ul>
-
-      <p>
-        Το μηχάνημα ενσωματώνεται αρμονικά στον χώρο, δεν απαιτεί προσωπικό και προσθέτει έναν
-        καινοτόμο τύπο εξυπηρέτησης που ξεχωρίζει το κατάστημα από τον ανταγωνισμό.
-      </p>
-    </div>
-  </section>
-
-  <!-- EN -->
-  <section class="lang lang-en info-block" style="display:none;">
-    <h2>For partners</h2>
-
-    <div class="slogan">
-      <p>A new way to attract customers</p>
-      <p>Modern technology. Reliability. Result.</p>
-    </div>
-
-    <div class="info-content">
-      <p><strong>A new customer attraction format</strong></p>
-      <p><strong>An additional revenue stream</strong></p>
-      <p><strong>A modern technological solution</strong></p>
-      <p><strong>Easy integration into any type of space</strong></p>
-      <p><strong>Enhanced venue status through innovative service</strong></p>
-
-      <h3>How HVG Perfume Point works</h3>
-      <p>The customer approaches the machine.</p>
-      <p>Selects a fragrance — familiar or new.</p>
-      <p>Chooses the number of doses they want to purchase.</p>
-      <p>Pays and receives the selected number of doses.</p>
-      <p>The price of one dose is lower than a cup of coffee.</p>
-
-      <h3>Where the machines can be installed</h3>
-      <ul>
-        <li>restaurants</li>
-        <li>bars</li>
-        <li>cafés</li>
-        <li>business centers</li>
-        <li>hotels</li>
-        <li>fitness clubs</li>
-      </ul>
-
-      <p>
-        The machine fits naturally into the interior, requires no staff, and becomes an additional service
-        that distinguishes the venue from competitors.
-      </p>
-    </div>
-  </section>
-
-  <!-- UA -->
-  <section class="lang lang-ua info-block" style="display:none;">
-    <h2>Партнерам</h2>
-
-    <div class="slogan">
-      <p>Новий формат залучення клієнтів</p>
-      <p>Сучасні технології. Надійність. Результат.</p>
-    </div>
-
-    <div class="info-content">
-      <p><strong>Новий формат залучення клієнтів</strong></p>
-      <p><strong>Додаткове джерело доходу</strong></p>
-      <p><strong>Сучасне технологічне рішення</strong></p>
-      <p><strong>Легка інтеграція у будь‑який простір</strong></p>
-      <p><strong>Підвищення статусу закладу завдяки інноваційному сервісу</strong></p>
-
-      <h3>Як працює HVG Perfume Point</h3>
-      <p>Клієнт підходить до апарата.</p>
-      <p>Обирає аромат — знайомий або новий.</p>
-      <p>Самостійно обирає кількість доз.</p>
-      <p>Оплачує покупку та отримує дози.</p>
-      <p>Ціна однієї дози — нижча за чашку кави.</p>
-
-      <h3>Де можна встановлювати апарати</h3>
-      <ul>
-        <li>ресторани</li>
-        <li>бари</li>
-        <li>кафе</li>
-        <li>бізнес‑центри</li>
-        <li>готелі</li>
-        <li>фітнес‑клуби</li>
-      </ul>
-
-      <p>
-        Апарат органічно вписується в інтер’єр, не потребує персоналу і стає додатковим сервісом,
-        який виділяє заклад серед конкурентів.
-      </p>
-    </div>
-  </section>
-
-
-
-  <!-- ========================= -->
-  <!-- 4. КОНТАКТЫ -->
-  <!-- ========================= -->
-
-  <!-- GR -->
-  <section class="lang lang-gr info-block">
-    <h2>Επικοινωνία</h2>
-
-    <p><strong>Τηλέφωνο:</strong> +306982125427, +306971941516</p>
-    <p><strong>Email:</strong> hvgpartners.gr@gmail.com</p>
-    <p><strong>Διεύθυνση:</strong> Αθήνα, Πειραιάς (Αττική)</p>
-
-    <div class="info-content">
-      <form class="contact-form">
-        <input type="text" placeholder="Όνομα" required>
-        <input type="text" placeholder="Εταιρεία" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Σχόλιο" required></textarea>
-        <button type="submit">Αποστολή</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- EN -->
-  <section class="lang lang-en info-block" style="display:none;">
-    <h2>Contacts</h2>
-
-    <p><strong>Phone:</strong> +306982125427, +306971941516</p>
-    <p><strong>Email:</strong> hvgpartners.gr@gmail.com</p>
-    <p><strong>Address:</strong> Athens, Piraeus (Attica)</p>
-
-    <div class="info-content">
-      <form class="contact-form">
-        <input type="text" placeholder="Name" required>
-        <input type="text" placeholder="Company" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Comment" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- UA -->
-  <section class="lang lang-ua info-block" style="display:none;">
-    <h2>Контакти</h2>
-
-    <p><strong>Телефон:</strong> +306982125427, +306971941516</p>
-    <p><strong>Email:</strong> hvgpartners.gr@gmail.com</p>
-    <p><strong>Адреса:</strong> Афіни, Пірей (Аттика)</p>
-
-    <div class="info-content">
-      <form class="contact-form">
-        <input type="text" placeholder="Ім’я" required>
-        <input type="text" placeholder="Компанія" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Коментар" required></
+</body>
+</html>
