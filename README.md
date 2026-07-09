@@ -1,79 +1,101 @@
-HVG Partners — премиальные вендинговые решения для бизнеса
-Партнёрские решения для бизнеса  
-Стратегия. Надёжность. Результат.
+# **HVG Partners — Premium Vending Solutions for Business**
 
-HVG Partners разрабатывает и внедряет инновационные вендинговые технологии для бизнеса в Греции.
-Мы создаём современные форматы автоматизированного сервиса — от концепции продукта до интеграции в инфраструктуру партнёров.
+**Innovative. Autonomous. Profitable.**  
+**Premium perfume vending systems for modern commercial spaces.**
 
-О проекте
-Этот репозиторий содержит исходный код корпоративного сайта HVG Partners, созданного в премиальном чёрно‑золотом стиле.
-Сайт разработан как визитка для партнёров и включает:
+HVG Partners develops and implements next‑generation vending technologies in Greece.  
+Our solutions combine premium customer experience with fully autonomous operation.
 
-многоязычную структуру (GR / EN / UA)
+---
 
-премиальный дизайн
+## **About the Project**
 
-анимации и интерактивные элементы
+This repository contains the full source code of the official HVG Partners website,  
+designed in a strict black‑gold corporate style with premium animations.
 
-раскрывающиеся блоки информации
+The website is built as a partner‑oriented business card and includes:
 
-форму обратной связи
+- multi‑language interface (GR / EN / UA)  
+- Windows‑style premium loading animation  
+- HVG Boot Sound Tech  
+- adaptive layout  
+- structured partner information  
+- perfume vending product page  
+- contact page with form  
 
-адаптивную верстку
+---
 
-Что мы предлагаем
-HVG Perfume Point — эксклюзивный вендинговый аппарат с парфюмом, который позволяет гостям протестировать премиальные ароматы по цене ниже чашки кофе.
+## **Website Structure**
 
-Наше решение помогает бизнесу:
-
-привлекать поток клиентов
-
-создавать дополнительный источник дохода
-
-повышать статус заведения
-
-внедрять инновационный сервис без участия персонала
-
-Где устанавливаются аппараты
-рестораны
-
-бары
-
-кафе
-
-бизнес‑центры
-
-отели
-
-фитнес‑клубы
-
-Аппарат органично вписывается в интерьер и становится частью премиального клиентского опыта.
-
-Технологии проекта
-HTML5 — структура сайта
-
-CSS3 — премиальный чёрно‑золотой стиль
-
-JavaScript — переключение языков и интерактивность
-
-GitHub Pages — хостинг и публикация
-
-Структура репозитория
-Код
 hvg-site/
 │
-├── index.html        # Основная страница сайта
+├── index.html          # Main page (company overview)
+├── vending.html        # Perfume vending product page
+├── partners.html       # Partner collaboration page
+├── contacts.html       # Contact information + form
+│
 ├── css/
-│   └── styles.css    # Премиальный стиль HVG Partners
-└── js/
-    └── lang.js       # Логика переключения языков и раскрытия блоков
-Контакты
-HVG Partners  
-Email: hvgpartners.gr@gmail.com
-Телефон: +30 698 212 5427
-Телефон: +30 697 194 1516
-Афины — Пирей, Аттика, Греция
+│   └── styles.css      # Premium black‑gold design
+│
+├── js/
+│   ├── ui.js           # Splash animation + boot sound
+│   └── lang.js         # GR / EN / UA language switcher
+│
+├── img/
+│   └── logo.png        # HVG Partners logo
+│
+└── boot.mp3            # HVG Boot Sound Tech
 
-Лицензия
-Проект является собственностью HVG Partners.
-Использование материалов допускается только с разрешения компании.
+---
+
+## **Technologies Used**
+
+- **HTML5** — structure  
+- **CSS3** — premium design  
+- **JavaScript** — animations, language switching  
+- **GitHub Pages** — hosting and deployment  
+
+---
+
+## **Perfume Vending — HVG Perfume Point**
+
+Premium autonomous vending system that delivers boutique‑level fragrance experience  
+in seconds — without staff, without maintenance, without operational complexity.
+
+**Benefits for partners:**
+
+- new revenue stream  
+- premium customer experience  
+- autonomous operation  
+- fast installation  
+- detailed usage reports  
+
+---
+
+## **Where HVG Vending Systems Are Installed**
+
+- hotels  
+- malls  
+- cafés  
+- restaurants  
+- premium stores  
+- business centers  
+- fitness clubs  
+
+---
+
+## **Contacts**
+
+**HVG Partners**  
+Email: hvgpartners.gr@gmail.com  
+Phone: +30 698 212 5427  
+Phone: +30 697 194 1516  
+Athens — Piraeus, Attica, Greece
+
+---
+
+## **License**
+
+All materials in this repository are the property of HVG Partners.  
+Use of the content is permitted only with written permission from the company.
+
