@@ -227,5 +227,78 @@ p {
   p {
     font-size: 16px;
   }
+}/* ============================
+   PREMIUM CONTACT FORM (DRIBBBLE STYLE)
+   ============================ */
+
+.contact-card {
+  background: #0d0d0d;
+  border: 1px solid var(--gold);
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
 }
+
+.contact-title {
+  color: var(--gold);
+  font-size: 28px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.contact-form-premium .input-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-premium label {
+  color: var(--gold-light);
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.contact-form-premium input,
+.contact-form-premium textarea {
+  background: #111;
+  border: 1px solid #333;
+  padding: 14px;
+  border-radius: 8px;
+  color: var(--silver);
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.contact-form-premium input:focus,
+.contact-form-premium textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+  outline: none;
+}
+
+.contact-form-premium textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 15px;
+  background: var(--gold);
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: var(--gold-light);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
 
