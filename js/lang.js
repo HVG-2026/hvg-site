@@ -18,3 +18,17 @@ document.querySelectorAll('.info-block').forEach(block => {
     block.classList.toggle('active');
   });
 });
+window.addEventListener("load", () => {
+    const sound = document.getElementById("boot-sound");
+
+    // Воспроизведение звука через 0.5 сек после загрузки
+    setTimeout(() => {
+        sound.volume = 0.4; // громкость
+        sound.play().catch(() => {});
+    }, 500);
+
+    // Показ контента после исчезновения splash
+    setTimeout(() => {
+        document.getElementById("site-content").style.display = "block";
+    }, 2200);
+});
