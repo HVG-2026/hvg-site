@@ -1,338 +1,200 @@
-/* ============================
-   HVG PARTNERS — PREMIUM STYLE
-   Black • Gold • Silver • White
-   ============================ */
-
 :root {
-  --black: #000000;
-  --white: #ffffff;
-  --silver: #c0c0c0;
+  --bg: #050608;
+  --bg-alt: #0b0d10;
   --gold: #d4af37;
-  --gold-light: #f5e4b0;
-  --gray-dark: #111111;
-  --gray-mid: #222222;
-  --transition: 0.3s ease;
+  --gold-soft: rgba(212, 175, 55, 0.18);
+  --text-main: #f5f5f5;
+  --text-muted: #b0b3b8;
+  --border: #262a30;
 }
-
-/* ============================
-   GLOBAL
-   ============================ */
 
 body {
   margin: 0;
-  padding: 0;
-  background: var(--black);
-  color: var(--silver);
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  overflow-x: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #151820 0, #050608 55%);
+  color: var(--text-main);
 }
-
-h1, h2 {
-  color: var(--gold);
-  margin-bottom: 15px;
-}
-
-p {
-  color: var(--silver);
-  font-size: 18px;
-}
-
-/* ============================
-   CONTAINER
-   ============================ */
 
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
-/* ============================
-   HEADER
-   ============================ */
-
 .site-header {
-  background: var(--gray-dark);
-  border-bottom: 1px solid var(--gold);
-  padding: 15px 0;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(to right, #050608, #0b0d10);
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 14px 0;
 }
 
+/* Логотип — увеличен */
 .logo img {
-  height: 60px;
+  height: 52px;
 }
 
-/* ============================
-   NAVIGATION
-   ============================ */
-
-.main-nav ul {
-  list-style: none;
+/* Золотые табы меню */
+.main-nav {
   display: flex;
-  gap: 25px;
-  padding: 0;
-  margin: 0;
+  gap: 8px;
+  margin-top: 12px;
+  margin-bottom: 8px;
 }
 
 .main-nav a {
-  color: var(--silver);
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 14px;
   text-decoration: none;
-  font-weight: bold;
-  transition: var(--transition);
+  transition: 0.25s ease;
+  background: transparent;
 }
 
 .main-nav a:hover {
-  color: var(--gold);
+  box-shadow: 0 0 18px var(--gold-soft);
+  background: var(--gold-soft);
 }
 
-/* ============================
-   LANGUAGE SWITCH
-   ============================ */
+.main-nav a.active {
+  background: var(--gold);
+  color: #050608;
+}
 
+/* Переключатель языка — мини‑табы */
 .lang-switch {
   display: flex;
-  gap: 10px;
+  gap: 6px;
 }
 
-.lang-switch a {
-  color: var(--black);
-  background: var(--gold);
-  padding: 8px 15px;
-  border-radius: 5px;
-  font-weight: bold;
+.lang-switch button {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  font-size: 12px;
   cursor: pointer;
-  transition: var(--transition);
+  transition: 0.25s ease;
 }
 
-.lang-switch a:hover {
-  background: var(--gold-light);
+.lang-switch button:hover {
+  background: var(--gold-soft);
 }
 
-/* ============================
-   SPLASH SCREEN (WINDOWS STYLE)
-   ============================ */
-
-#splash {
-  position: fixed;
-  inset: 0;
-  background: var(--black);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  opacity: 1;
-  transition: opacity 1s ease;
-}
-
-.splash-inner {
-  text-align: center;
-}
-
-.splash-logo {
-  width: 180px;
-  margin-bottom: 40px;
-  filter: drop-shadow(0 0 10px var(--gold));
-}
-
-/* Loader circles */
-.loader {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.circle {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
+.lang-switch button.active {
   background: var(--gold);
-  animation: pulse 1.2s infinite ease-in-out;
+  color: #050608;
 }
 
-.circle-left {
-  animation-delay: 0s;
-}
-
-.circle-right {
-  animation-delay: 0.3s;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 0.6; }
-  50% { transform: scale(1.4); opacity: 1; }
-  100% { transform: scale(1); opacity: 0.6; }
-}
-
-/* ============================
-   PAGE CONTENT
-   ============================ */
-
+/* Контент */
 .page {
-  padding: 60px 0;
+  padding-bottom: 40px;
 }
 
 .section {
-  margin-bottom: 60px;
-  padding: 40px;
-  background: var(--gray-mid);
-  border: 1px solid var(--gold);
-  border-radius: 10px;
+  padding: 24px 0 32px;
 }
 
-/* ============================
-   FOOTER
-   ============================ */
-
-.site-footer {
-  background: var(--gray-dark);
-  border-top: 1px solid var(--gold);
-  padding: 20px 0;
-  text-align: center;
-  color: var(--silver);
+.section h1 {
+  font-size: 26px;
+  margin-bottom: 16px;
 }
 
-/* ============================
-   RESPONSIVE
-   ============================ */
+.section h2 {
+  font-size: 18px;
+  margin-top: 22px;
+  margin-bottom: 10px;
+}
 
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    gap: 20px;
-  }
+.section p {
+  color: var(--text-main);
+  line-height: 1.6;
+}
 
-  .main-nav ul {
-    flex-direction: column;
-    gap: 15px;
-  }
+.section ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-muted);
+}
 
-  .section {
-    padding: 25px;
-  }
-
-  h1 {
-    font-size: 26px;
-  }
-
-  h2 {
-    font-size: 22px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-}/* ============================
-   PREMIUM CONTACT FORM (DRIBBBLE STYLE)
-   ============================ */
-
+/* Контакты / форма */
 .contact-card {
-  background: #0d0d0d;
-  border: 1px solid var(--gold);
-  padding: 40px;
-  border-radius: 15px;
-  max-width: 600px;
-  margin: 40px auto;
-  box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 16px;
+  background: #0b0d10;
+  border: 1px solid var(--border);
 }
 
-.contact-title {
-  color: var(--gold);
-  font-size: 28px;
-  margin-bottom: 25px;
-  text-align: center;
+.input-group {
+  margin-bottom: 14px;
 }
 
-.contact-form-premium .input-group {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
+.input-group label {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
 }
 
-.contact-form-premium label {
-  color: var(--gold-light);
-  margin-bottom: 8px;
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #050608;
+  color: var(--text-main);
   font-size: 14px;
 }
 
-.contact-form-premium input,
-.contact-form-premium textarea {
-  background: #111;
-  border: 1px solid #333;
-  padding: 14px;
-  border-radius: 8px;
-  color: var(--silver);
-  font-size: 16px;
-  transition: 0.3s ease;
-}
-
-.contact-form-premium input:focus,
-.contact-form-premium textarea:focus {
-  border-color: var(--gold);
-  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
-  outline: none;
-}
-
-.contact-form-premium textarea {
-  min-height: 120px;
-  resize: none;
+.input-group textarea {
+  min-height: 90px;
 }
 
 .contact-btn {
-  width: 100%;
-  padding: 15px;
+  margin-top: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--gold);
   background: var(--gold);
-  color: #000;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  font-size: 18px;
+  color: #050608;
+  font-size: 14px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.25s ease;
 }
 
 .contact-btn:hover {
-  background: var(--gold-light);
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
-}
-/* Loader (золотой круг) */
-.hvg-loader {
-  width: 16px;
-  height: 16px;
-  border: 3px solid rgba(255, 255, 255, 0.4);
-  border-top-color: #000;
-  border-radius: 50%;
-  animation: hvgSpin 0.8s linear infinite;
-  display: inline-block;
-  margin-left: 10px;
-  vertical-align: middle;
+  box-shadow: 0 0 18px var(--gold-soft);
 }
 
-@keyframes hvgSpin {
-  to { transform: rotate(360deg); }
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 16px 0 22px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
 }
 
-/* Сообщение об успехе */
-.hvg-success {
-  margin-top: 20px;
-  padding: 15px;
-  background: rgba(60, 179, 113, 0.15);
-  border-left: 4px solid #3cb371;
-  color: var(--silver);
-  border-radius: 8px;
-  opacity: 0;
+/* Адаптив */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+  }
 }
-
-/* Анимация появления */
-@keyframes hvgFadeSlide {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-
-
