@@ -1,26 +1,3 @@
-<link rel="stylesheet" href="css/styles.css" />
-<header class="site-header">
-  <div class="container header-inner">
-
-    <div class="logo">
-      <img src="img/logo.png" alt="HVG & partners">
-    </div>
-
-    <div class="lang-switch">
-      <button data-lang="gr">GR</button>
-      <button data-lang="en">EN</button>
-      <button data-lang="ua">UA</button>
-    </div>
-
-  </div>
-</header>
-
-<footer class="site-footer">
-  <div class="container">
-    <p>© HVG & partners, Greece</p>
-  </div>
-</footer>
-
 <!DOCTYPE html>
 <html lang="gr">
 <head>
@@ -54,19 +31,11 @@
         <img src="img/logo.png" alt="HVG & partners" />
       </div>
 
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html">Ο εταιρεία / Company / Компанія</a></li>
-          <li><a href="vending.html">Vending άρωμα / Perfume Vending / Вендинг парфюм</a></li>
-          <li><a href="partners.html">Συνεργάτες / Partners / Партнерам</a></li>
-          <li><a href="contacts.html">Επικοινωνία / Contacts / Контакти</a></li>
-        </ul>
-      </nav>
-
+      <!-- LANGUAGE SWITCH -->
       <div class="lang-switch">
-        <a data-lang="gr">GR</a>
-        <a data-lang="en">EN</a>
-        <a data-lang="ua">UA</a>
+        <button data-lang="gr">GR</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="ua">UA</button>
       </div>
 
     </div>
@@ -75,8 +44,17 @@
   <!-- MAIN CONTENT -->
   <main class="page" id="company">
 
-    <!-- GREEK -->
+    <!-- ===================== GREEK ===================== -->
     <div class="lang lang-gr">
+
+      <!-- GOLD TABS MENU -->
+      <nav class="main-nav">
+        <a href="index.html" class="active">Ο εταιρεία</a>
+        <a href="vending.html">Vending άρωμα</a>
+        <a href="partners.html">Συνεργάτες</a>
+        <a href="contacts.html">Επικοινωνία</a>
+      </nav>
+
       <section class="section">
         <div class="container">
           <h1>HVG & partners — καινοτόμες λύσεις για επιχειρήσεις στην Ελλάδα</h1>
@@ -91,8 +69,17 @@
       </section>
     </div>
 
-    <!-- ENGLISH -->
+    <!-- ===================== ENGLISH ===================== -->
     <div class="lang lang-en" style="display:none;">
+
+      <!-- GOLD TABS MENU -->
+      <nav class="main-nav">
+        <a href="index.html" class="active">Company</a>
+        <a href="vending.html">Perfume Vending</a>
+        <a href="partners.html">Partners</a>
+        <a href="contacts.html">Contacts</a>
+      </nav>
+
       <section class="section">
         <div class="container">
           <h1>HVG & partners — innovative business solutions in Greece</h1>
@@ -107,8 +94,17 @@
       </section>
     </div>
 
-    <!-- UKRAINIAN -->
+    <!-- ===================== UKRAINIAN ===================== -->
     <div class="lang lang-ua" style="display:none;">
+
+      <!-- GOLD TABS MENU -->
+      <nav class="main-nav">
+        <a href="index.html" class="active">Компанія</a>
+        <a href="vending.html">Вендінг парфюм</a>
+        <a href="partners.html">Партнерам</a>
+        <a href="contacts.html">Контакти</a>
+      </nav>
+
       <section class="section">
         <div class="container">
           <h1>HVG & partners — інноваційні рішення для бізнесу в Греції</h1>
