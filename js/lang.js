@@ -4,11 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function setLang(code) {
     langBlocks.forEach(block => {
-      if (block.classList.contains(`lang-${code}`)) {
-        block.style.display = "";
-      } else {
-        block.style.display = "none";
-      }
+      block.style.display = block.classList.contains(`lang-${code}`) ? "" : "none";
     });
 
     buttons.forEach(btn => {
@@ -22,6 +18,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Язык по умолчанию — греческий
   setLang("gr");
 });
