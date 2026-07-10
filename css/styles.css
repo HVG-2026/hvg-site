@@ -138,6 +138,13 @@ body {
 .input-group {
   margin-bottom: 14px;
 }
+.section {
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 24px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.15);
+}
 
 .input-group label {
   display: block;
