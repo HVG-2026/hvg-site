@@ -1,8 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   const splash = document.getElementById("splash");
+
+  if (!splash) return; // если нет splash — ничего не делаем
+
   const logo = document.querySelector(".splash-logo");
   const header = document.querySelector(".site-header");
-  const main = document.querySelector("main");
+  const main = document.querySelector(".page");
 
   header.style.opacity = "0";
   main.style.opacity = "0";
