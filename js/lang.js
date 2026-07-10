@@ -1,25 +1,48 @@
+// ===============================
+//  HVG Partners — Language System
+// ===============================
+
+// Load saved language or default to Greek
+let currentLang = localStorage.getItem("hvg-lang") || "gr";
+
+// Apply language on page load
 document.addEventListener("DOMContentLoaded", () => {
-  const buttons = document.querySelectorAll(".lang-switch button");
-  const langBlocks = document.querySelectorAll(".lang");
-
-  function setLang(code) {
-    langBlocks.forEach(block => {
-      block.style.display = block.classList.contains(`lang-${code}`) ? "" : "none";
-    });
-
-    buttons.forEach(btn => {
-      btn.classList.toggle("active", btn.dataset.lang === code);
-    });
-
-    localStorage.setItem("hvg-lang", code);
-  }
-
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      setLang(btn.dataset.lang);
-    });
-  });
-
-  const saved = localStorage.getItem("hvg-lang") || "gr";
-  setLang(saved);
+  applyLanguage(currentLang);
+  highlightActiveLanguage(currentLang);
 });
+
+// Handle language switch buttons
+document.querySelectorAll(".lang-switch button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const lang = btn.getAttribute("data-lang");
+    currentLang = lang;
+
+    // Save language
+    localStorage.setItem("hvg-lang", lang);
+
+    // Apply language
+    applyLanguage(lang);
+
+    // Highlight active language
+    highlightActiveLanguage(lang);
+  });
+});
+
+// Show selected language blocks, hide others
+function applyLanguage(lang) {
+  document.querySelectorAll(".lang").forEach(block => {
+    block.style.display = block.classList.contains(`lang-${lang}`)
+      ? "block"
+      : "none";
+  });
+}
+
+// Highlight active language button
+function highlightActiveLanguage(lang) {
+  document.querySelectorAll(".lang-switch button").forEach(btn => {
+    btn.classList.remove("active");
+    if (btn.getAttribute("data-lang") === lang) {
+      btn.classList.add("active");
+    }
+  });
+}
