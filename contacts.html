@@ -11,14 +11,13 @@
 
   <!-- HEADER -->
   <header class="site-header">
-    <div class="container header-inner">
 
-      <div class="logo">
-        <img src="img/logo.png" alt="HVG & partners" />
-      </div>
+    <!-- GREEK -->
+    <div class="header-inner lang lang-gr">
+      <div class="logo"><img src="img/logo.png" alt="HVG Logo" /></div>
 
       <nav class="main-nav">
-        <a href="index.html">Ο εταιρεία</a>
+        <a href="about.html">Ο εταιρεία</a>
         <a href="vending.html">Vending άρωμα</a>
         <a href="partners.html">Συνεργάτες</a>
         <a href="contacts.html" class="active">Επικοινωνία</a>
@@ -29,18 +28,69 @@
         <button data-lang="en">EN</button>
         <button data-lang="ua">UA</button>
       </div>
-
     </div>
+
+    <!-- ENGLISH -->
+    <div class="header-inner lang lang-en" style="display:none;">
+      <div class="logo"><img src="img/logo.png" alt="HVG Logo" /></div>
+
+      <nav class="main-nav">
+        <a href="about.html">About</a>
+        <a href="vending.html">Perfume Vending</a>
+        <a href="partners.html">Partners</a>
+        <a href="contacts.html" class="active">Contacts</a>
+      </nav>
+
+      <div class="lang-switch">
+        <button data-lang="gr">GR</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="ua">UA</button>
+      </div>
+    </div>
+
+    <!-- UKRAINIAN -->
+    <div class="header-inner lang lang-ua" style="display:none;">
+      <div class="logo"><img src="img/logo.png" alt="HVG Logo" /></div>
+
+      <nav class="main-nav">
+        <a href="about.html">Про нас</a>
+        <a href="vending.html">Вендінг парфюм</a>
+        <a href="partners.html">Партнерам</a>
+        <a href="contacts.html" class="active">Контакти</a>
+      </nav>
+
+      <div class="lang-switch">
+        <button data-lang="gr">GR</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="ua">UA</button>
+      </div>
+    </div>
+
   </header>
 
-  <!-- MAIN -->
+  <!-- MAIN CONTENT -->
   <main class="page">
 
     <!-- GREEK -->
     <div class="lang lang-gr">
       <section class="section">
         <h1>Επικοινωνία</h1>
-        <p>Στοιχεία επικοινωνίας της HVG Partners...</p>
+        <p>
+          Επικοινωνήστε μαζί μας για συνεργασία, πληροφορίες ή τεχνική υποστήριξη.
+        </p>
+
+        <form action="https://formspree.io/f/xdarrqoo" method="POST" class="contact-form">
+          <label>Όνομα</label>
+          <input type="text" name="name" required>
+
+          <label>Email</label>
+          <input type="email" name="email" required>
+
+          <label>Μήνυμα</label>
+          <textarea name="message" required></textarea>
+
+          <button type="submit">Αποστολή</button>
+        </form>
       </section>
     </div>
 
@@ -48,7 +98,22 @@
     <div class="lang lang-en" style="display:none;">
       <section class="section">
         <h1>Contacts</h1>
-        <p>Contact details of HVG Partners...</p>
+        <p>
+          Contact us for partnership, information or technical support.
+        </p>
+
+        <form action="https://formspree.io/f/xdarrqoo" method="POST" class="contact-form">
+          <label>Name</label>
+          <input type="text" name="name" required>
+
+          <label>Email</label>
+          <input type="email" name="email" required>
+
+          <label>Message</label>
+          <textarea name="message" required></textarea>
+
+          <button type="submit">Send</button>
+        </form>
       </section>
     </div>
 
@@ -56,7 +121,22 @@
     <div class="lang lang-ua" style="display:none;">
       <section class="section">
         <h1>Контакти</h1>
-        <p>Контактні дані HVG Partners...</p>
+        <p>
+          Зв’яжіться з нами для партнерства, інформації або технічної підтримки.
+        </p>
+
+        <form action="https://formspree.io/f/xdarrqoo" method="POST" class="contact-form">
+          <label>Ім’я</label>
+          <input type="text" name="name" required>
+
+          <label>Email</label>
+          <input type="email" name="email" required>
+
+          <label>Повідомлення</label>
+          <textarea name="message" required></textarea>
+
+          <button type="submit">Надіслати</button>
+        </form>
       </section>
     </div>
 
