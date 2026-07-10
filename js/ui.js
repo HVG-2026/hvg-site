@@ -1,33 +1,48 @@
+// ===============================
+//  HVG Partners — UI / Splash System
+// ===============================
+
+// Splash screen hide after load
 document.addEventListener("DOMContentLoaded", () => {
-  const splash = document.getElementById("splash");
+  setTimeout(() => {
+    const splash = document.getElementById("splash");
+    if (splash) {
+      splash.style.opacity = "0";
+      splash.style.transition = "opacity 0.8s ease";
 
-  if (!splash) return; // если нет splash — ничего не делаем
+      setTimeout(() => {
+        splash.style.display = "none";
+      }, 800);
+    }
+  }, 2200); // splash duration
+});
 
-  const logo = document.querySelector(".splash-logo");
+// Smooth fade-in for page content
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.style.opacity = "0";
+  document.body.style.transition = "opacity 0.8s ease";
+
+  setTimeout(() => {
+    document.body.style.opacity = "1";
+  }, 300);
+});
+
+// Fix mobile header spacing
+function adjustMobileHeader() {
   const header = document.querySelector(".site-header");
-  const main = document.querySelector(".page");
+  if (!header) return;
 
-  header.style.opacity = "0";
-  main.style.opacity = "0";
+  if (window.innerWidth < 768) {
+    header.style.padding = "15px 0";
+  } else {
+    header.style.padding = "10px 0";
+  }
+}
 
-  logo.style.opacity = "0";
-  logo.style.transform = "scale(0.9)";
-  setTimeout(() => {
-    logo.style.transition = "opacity 1.2s ease, transform 1.2s ease";
-    logo.style.opacity = "1";
-    logo.style.transform = "scale(1)";
-  }, 100);
+window.addEventListener("resize", adjustMobileHeader);
+window.addEventListener("DOMContentLoaded", adjustMobileHeader);
 
-  setTimeout(() => {
-    splash.style.transition = "opacity 1s ease";
-    splash.style.opacity = "0";
-  }, 2000);
-
-  setTimeout(() => {
-    splash.style.display = "none";
-    header.style.transition = "opacity 0.8s ease";
-    main.style.transition = "opacity 0.8s ease";
-    header.style.opacity = "1";
-    main.style.opacity = "1";
-  }, 2800);
+// Prevent layout shift on splash removal
+window.addEventListener("load", () => {
+  document.body.style.visibility = "visible";
 });
