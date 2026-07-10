@@ -1,8 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   const splash = document.getElementById("splash");
   const logo = document.querySelector(".splash-logo");
+  const header = document.querySelector(".site-header");
+  const main = document.querySelector("main");
 
-  // Windows‑style boot animation
+  // сначала прячем шапку и контент
+  if (header) header.style.opacity = "0";
+  if (main) main.style.opacity = "0";
+
+  // анимация логотипа по центру
   if (logo) {
     logo.style.opacity = "0";
     logo.style.transform = "scale(0.9)";
@@ -13,12 +19,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 100);
   }
 
-  // Fade out splash
+  // затухание splash
   setTimeout(() => {
-    splash.style.opacity = "0";
+    if (splash) {
+      splash.style.transition = "opacity 1s ease";
+      splash.style.opacity = "0";
+    }
   }, 1800);
 
+  // скрываем splash и показываем меню + стартовую страницу
   setTimeout(() => {
-    splash.style.display = "none";
+    if (splash) splash.style.display = "none";
+    if (header) {
+      header.style.transition = "opacity 0.8s ease";
+      header.style.opacity = "1";
+    }
+    if (main) {
+      main.style.transition = "opacity 0.8s ease";
+      main.style.opacity = "1";
+    }
   }, 2600);
 });
