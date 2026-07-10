@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     buttons.forEach(btn => {
       btn.classList.toggle("active", btn.dataset.lang === code);
     });
+
+    localStorage.setItem("hvg-lang", code);
   }
 
   buttons.forEach(btn => {
@@ -18,5 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  setLang("gr");
+  const saved = localStorage.getItem("hvg-lang") || "gr";
+  setLang(saved);
 });
