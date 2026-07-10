@@ -6,6 +6,12 @@ body {
 }
 
 /* HEADER */
+.site-header {
+  position: relative;
+  z-index: 10;
+  opacity: 1; /* ВСЕГДА видима */
+}
+
 .header-inner {
   display: flex;
   align-items: center;
@@ -38,7 +44,7 @@ body {
   border-radius: 8px;
 }
 
-/* SPLASH */
+/* SPLASH — работает только на index.html */
 #splash {
   position: fixed;
   inset: 0;
@@ -91,6 +97,12 @@ body {
 }
 
 /* CONTENT */
+.page {
+  position: relative;
+  z-index: 1;
+  opacity: 1; /* ВСЕГДА видима */
+}
+
 .section {
   margin: 40px auto;
   max-width: 900px;
@@ -98,5 +110,8 @@ body {
   border: 1px solid rgba(212, 175, 55, 0.25);
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.15);
+}
+02);
   box-shadow: 0 0 18px rgba(212, 175, 55, 0.15);
 }
