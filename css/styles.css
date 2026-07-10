@@ -209,4 +209,14 @@ body {
     max-width: 50vw;
   }
 }
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-nav {
+  display: flex;
+  gap: 10px;
+}
 
