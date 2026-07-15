@@ -1,12 +1,12 @@
-// ui.js — HVG Partners
+// ui.js — HVG Partners (эффект как раньше)
 
 // Плавное появление страницы
 document.addEventListener("DOMContentLoaded", () => {
   document.body.style.opacity = "0";
-  document.body.style.transition = "opacity 0.6s ease";
+  document.body.style.transition = "opacity 0.8s ease";
   setTimeout(() => {
     document.body.style.opacity = "1";
-  }, 150);
+  }, 200);
 });
 
 // Скрытие splash и переход на страницу "Про нас" (GR)
@@ -14,8 +14,8 @@ window.addEventListener("load", () => {
   const splash = document.getElementById("splash");
   if (!splash) return;
 
-  // Плавное исчезновение splash
-  splash.style.transition = "opacity 1.2s ease";
+  // Плавное исчезновение splash — 2 секунды (как раньше)
+  splash.style.transition = "opacity 2s ease";
   splash.style.opacity = "0";
 
   setTimeout(() => {
@@ -27,7 +27,7 @@ window.addEventListener("load", () => {
       window.location.href = "about.html?lang=gr";
     }
 
-  }, 1200);
+  }, 2000); // ← 2 секунды, как было раньше
 });
 
 // Обработка форм контактов
