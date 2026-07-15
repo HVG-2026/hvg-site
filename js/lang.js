@@ -1,48 +1,30 @@
-// ===============================
-//  HVG Partners — Language System
-// ===============================
+(function () {
+  const STORAGE_KEY = 'hvg-lang';
 
-// Load saved language or default to Greek
-let currentLang = localStorage.getItem("hvg-lang") || "gr";
+  function setLang(lang) {
+    localStorage.setItem(STORAGE_KEY, lang);
+    applyLang(lang);
+  }
 
-// Apply language on page load
-document.addEventListener("DOMContentLoaded", () => {
-  applyLanguage(currentLang);
-  highlightActiveLanguage(currentLang);
-});
+  function applyLang(lang) {
+    document.querySelectorAll('.lang').forEach(el => {
+      el.style.display = el.classList.contains('lang-' + lang) ? '' : 'none';
+    });
+    document.querySelectorAll('.lang-switch button').forEach(btn => {
+      const active = btn.getAttribute('data-lang') === lang;
+      btn.setAttribute('data-active', active ? 'true' : 'false');
+    });
+  }
 
-// Handle language switch buttons
-document.querySelectorAll(".lang-switch button").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const lang = btn.getAttribute("data-lang");
-    currentLang = lang;
-
-    // Save language
-    localStorage.setItem("hvg-lang", lang);
-
-    // Apply language
-    applyLanguage(lang);
-
-    // Highlight active language
-    highlightActiveLanguage(lang);
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('.lang-switch button');
+    if (!btn) return;
+    const lang = btn.getAttribute('data-lang');
+    setLang(lang);
   });
-});
 
-// Show selected language blocks, hide others
-function applyLanguage(lang) {
-  document.querySelectorAll(".lang").forEach(block => {
-    block.style.display = block.classList.contains(`lang-${lang}`)
-      ? "block"
-      : "none";
+  document.addEventListener('DOMContentLoaded', function () {
+    const saved = localStorage.getItem(STORAGE_KEY) || 'gr';
+    applyLang(saved);
   });
-}
-
-// Highlight active language button
-function highlightActiveLanguage(lang) {
-  document.querySelectorAll(".lang-switch button").forEach(btn => {
-    btn.classList.remove("active");
-    if (btn.getAttribute("data-lang") === lang) {
-      btn.classList.add("active");
-    }
-  });
-}
+})();
