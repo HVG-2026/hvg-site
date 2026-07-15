@@ -1,43 +1,38 @@
-// ===============================
-//  HVG Partners — UI / Form Handler
-// ===============================
+// ui.js — HVG & Partners UI
 
-// Fade-in page on load
+// Плавное появление страницы
 document.addEventListener("DOMContentLoaded", () => {
   document.body.style.opacity = "0";
-  document.body.style.transition = "opacity 0.8s ease";
-
+  document.body.style.transition = "opacity 0.6s ease";
   setTimeout(() => {
     document.body.style.opacity = "1";
-  }, 200);
+  }, 150);
 });
 
-// Splash screen hide (если он есть)
+// Скрытие splash-экрана после загрузки
 window.addEventListener("load", () => {
   const splash = document.getElementById("splash");
-  if (splash) {
-    splash.style.opacity = "0";
-    splash.style.transition = "opacity 0.8s ease";
+  if (!splash) return;
 
-    setTimeout(() => {
-      splash.style.display = "none";
-    }, 800);
-  }
+  splash.style.transition = "opacity 0.8s ease";
+  splash.style.opacity = "0";
+
+  setTimeout(() => {
+    splash.remove();
+  }, 800);
 });
 
-// Contact form handler
+// Обработка форм контактов (статус + авто-очистка)
 document.addEventListener("DOMContentLoaded", () => {
   const forms = document.querySelectorAll(".contact-form");
 
   forms.forEach(form => {
     const status = form.querySelector(".form-status");
 
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", () => {
       if (!status) return;
 
       status.textContent = "Sending...";
-
-      // Auto-clear fields after sending
       setTimeout(() => {
         form.reset();
         status.textContent = "Message sent!";
