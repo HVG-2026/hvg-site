@@ -9,20 +9,17 @@
 
 <body>
 
-<!-- SPLASH SCREEN -->
+<!-- SPLASH -->
 <div id="splash">
   <div class="splash-inner">
 
-    <!-- LOGO -->
     <img src="img/logo.png" class="splash-logo" alt="HVG Logo">
 
-    <!-- RINGS -->
     <div class="loader">
       <div class="ring ring-gold"></div>
       <div class="ring ring-silver"></div>
     </div>
 
-    <!-- WORDS -->
     <div class="splash-words">
       <span>Reliability</span>
       <span>Prestige</span>
@@ -34,10 +31,65 @@
   </div>
 </div>
 
+<!-- HEADER -->
+<header class="site-header">
+
+  <div class="header-inner lang lang-gr">
+    <div class="logo"><img src="img/logo.png" alt="HVG Logo"></div>
+
+    <nav class="main-nav">
+      <a href="about.html">Ο εταιρεία</a>
+      <a href="vending.html">Vending</a>
+      <a href="partners.html">Συνεργάτες</a>
+      <a href="contacts.html">Επικοινωνία</a>
+    </nav>
+
+    <div class="lang-switch">
+      <button data-lang="gr">GR</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="ua">UA</button>
+    </div>
+  </div>
+
+  <div class="header-inner lang lang-en" style="display:none;">
+    <div class="logo"><img src="img/logo.png" alt="HVG Logo"></div>
+
+    <nav class="main-nav">
+      <a href="about.html">About us</a>
+      <a href="vending.html">Vending</a>
+      <a href="partners.html">Partners</a>
+      <a href="contacts.html">Contacts</a>
+    </nav>
+
+    <div class="lang-switch">
+      <button data-lang="gr">GR</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="ua">UA</button>
+    </div>
+  </div>
+
+  <div class="header-inner lang lang-ua" style="display:none;">
+    <div class="logo"><img src="img/logo.png" alt="HVG Logo"></div>
+
+    <nav class="main-nav">
+      <a href="about.html">Про нас</a>
+      <a href="vending.html">Вендінг</a>
+      <a href="partners.html">Партнерам</a>
+      <a href="contacts.html">Контакти</a>
+    </nav>
+
+    <div class="lang-switch">
+      <button data-lang="gr">GR</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="ua">UA</button>
+    </div>
+  </div>
+
+</header>
+
 <!-- MAIN CONTENT -->
 <main class="page">
 
-  <!-- Greek -->
   <div class="lang lang-gr">
     <section class="section">
       <h1>HVG & Partners</h1>
@@ -45,7 +97,6 @@
     </section>
   </div>
 
-  <!-- English -->
   <div class="lang lang-en" style="display:none;">
     <section class="section">
       <h1>HVG & Partners</h1>
@@ -53,7 +104,6 @@
     </section>
   </div>
 
-  <!-- Ukrainian -->
   <div class="lang lang-ua" style="display:none;">
     <section class="section">
       <h1>HVG & Partners</h1>
@@ -68,5 +118,4 @@
 
 </body>
 </html>
-
 
