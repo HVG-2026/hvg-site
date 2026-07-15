@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   const splash = document.getElementById('splash');
-  const words = splash ? splash.querySelectorAll('.splash-words span') : [];
+  const words = splash.querySelectorAll('.splash-words span');
   let index = 0;
 
   function showNextWord() {
@@ -8,24 +8,21 @@ document.addEventListener('DOMContentLoaded', function () {
     if (words[index]) {
       words[index].style.display = 'inline';
       index++;
-      if (index < words.length) {
-        setTimeout(showNextWord, 700);
-      } else {
-        setTimeout(finishSplash, 800);
-      }
+      setTimeout(showNextWord, 900);
     } else {
-      finishSplash();
+      setTimeout(finishSplash, 900);
     }
   }
 
   function finishSplash() {
-    if (!splash) return;
     splash.style.opacity = '1';
     const fade = setInterval(() => {
       const o = parseFloat(splash.style.opacity);
       if (o <= 0) {
         clearInterval(fade);
         splash.style.display = 'none';
+
+        const lang = localStorage.getItem('hvg-lang') || 'gr';
         window.location.href = 'about.html';
       } else {
         splash.style.opacity = (o - 0.05).toString();
@@ -33,10 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 40);
   }
 
-  if (splash && words.length) {
-    splash.style.opacity = '1';
-    setTimeout(showNextWord, 800);
-  }
+  setTimeout(showNextWord, 800);
 
   // CONTACT FORM AJAX + RESET
   document.querySelectorAll('.contact-form').forEach(form => {
@@ -53,12 +47,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }).then(res => {
         if (res.ok) {
           form.reset();
-          status.textContent = 'Повідомлення надіслано / Message sent';
+          status.textContent = 'Message sent';
         } else {
-          status.textContent = 'Помилка / Error';
+          status.textContent = 'Error';
         }
       }).catch(() => {
-        status.textContent = 'Помилка / Error';
+        status.textContent = 'Error';
       });
     });
   });
