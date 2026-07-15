@@ -1,4 +1,4 @@
-// ui.js — HVG & Partners UI
+// ui.js — HVG Partners
 
 // Плавное появление страницы
 document.addEventListener("DOMContentLoaded", () => {
@@ -9,20 +9,35 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 150);
 });
 
-// Скрытие splash-экрана после полной загрузки
+// Скрытие splash-экрана и загрузка стартовой страницы "Про нас" (GR)
 window.addEventListener("load", () => {
   const splash = document.getElementById("splash");
   if (!splash) return;
 
-  splash.style.transition = "opacity 0.8s ease";
+  // Плавное исчезновение splash
+  splash.style.transition = "opacity 1.2s ease";
   splash.style.opacity = "0";
 
+  // Удаление splash и показ стартовой страницы
   setTimeout(() => {
     splash.remove();
-  }, 800);
+
+    // Включаем греческий язык как стартовый
+    const langBlocks = document.querySelectorAll(".lang");
+    langBlocks.forEach(el => {
+      el.style.display = el.classList.contains("lang-gr") ? "" : "none";
+    });
+
+    // Если мы на index.html — автоматически показываем "Про нас"
+    if (window.location.pathname.endsWith("index.html") ||
+        window.location.pathname.endsWith("/")) {
+      window.location.href = "about.html?lang=gr";
+    }
+
+  }, 1200);
 });
 
-// Обработка форм контактов (статус + авто-очистка)
+// Обработка форм контактов
 document.addEventListener("DOMContentLoaded", () => {
   const forms = document.querySelectorAll(".contact-form");
 
