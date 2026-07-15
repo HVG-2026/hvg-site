@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 150);
 });
 
-// Скрытие splash-экрана после загрузки
+// Скрытие splash-экрана после полной загрузки
 window.addEventListener("load", () => {
   const splash = document.getElementById("splash");
   if (!splash) return;
