@@ -1,32 +1,31 @@
-// js/lang.js
-
-document.addEventListener("DOMContentLoaded", () => {
-  const switchers = document.querySelectorAll(".lang-switch button");
+(function () {
+  const STORAGE_KEY = 'hvg-lang';
 
   function setLang(lang) {
-    // показать нужные блоки .lang-XX
-    document.querySelectorAll(".lang").forEach(el => {
-      if (el.classList.contains("lang-" + lang)) {
-        el.style.display = "";
-      } else {
-        el.style.display = "none";
-      }
+    localStorage.setItem(STORAGE_KEY, lang);
+    applyLang(lang);
+  }
+
+  function applyLang(lang) {
+    document.querySelectorAll('.lang').forEach(el => {
+      el.style.display = el.classList.contains('lang-' + lang) ? '' : 'none';
     });
 
-    // подсветить активную кнопку
-    switchers.forEach(btn => {
-      btn.dataset.active = (btn.dataset.lang === lang) ? "true" : "false";
+    document.querySelectorAll('.lang-switch button').forEach(btn => {
+      const active = btn.getAttribute('data-lang') === lang;
+      btn.setAttribute('data-active', active ? 'true' : 'false');
     });
   }
 
-  // стартовый язык — греческий
-  setLang("gr");
-
-  // обработчики клика по кнопкам
-  switchers.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const lang = btn.dataset.lang;
-      setLang(lang);
-    });
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('.lang-switch button');
+    if (!btn) return;
+    const lang = btn.getAttribute('data-lang');
+    setLang(lang);
   });
-});
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const saved = localStorage.getItem(STORAGE_KEY) || 'gr';
+    applyLang(saved);
+  });
+})();
