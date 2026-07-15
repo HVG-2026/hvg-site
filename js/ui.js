@@ -1,50 +1,59 @@
-// ui.js — HVG Partners (эффект как раньше)
+document.addEventListener('DOMContentLoaded', function () {
+  const splash = document.getElementById('splash');
+  const words = splash.querySelectorAll('.splash-words span');
+  let index = 0;
 
-// Плавное появление страницы
-document.addEventListener("DOMContentLoaded", () => {
-  document.body.style.opacity = "0";
-  document.body.style.transition = "opacity 0.8s ease";
-  setTimeout(() => {
-    document.body.style.opacity = "1";
-  }, 200);
-});
-
-// Скрытие splash и переход на страницу "Про нас" (GR)
-window.addEventListener("load", () => {
-  const splash = document.getElementById("splash");
-  if (!splash) return;
-
-  // Плавное исчезновение splash — 2 секунды (как раньше)
-  splash.style.transition = "opacity 2s ease";
-  splash.style.opacity = "0";
-
-  setTimeout(() => {
-    splash.remove();
-
-    // Автоматическая загрузка страницы "Про нас" на греческом
-    if (window.location.pathname.endsWith("index.html") ||
-        window.location.pathname.endsWith("/")) {
-      window.location.href = "about.html?lang=gr";
+  function showNextWord() {
+    words.forEach(w => w.style.display = 'none');
+    if (words[index]) {
+      words[index].style.display = 'inline';
+      index++;
+      setTimeout(showNextWord, 900);
+    } else {
+      setTimeout(finishSplash, 900);
     }
+  }
 
-  }, 2000); // ← 2 секунды, как было раньше
-});
+  function finishSplash() {
+    splash.style.opacity = '1';
+    const fade = setInterval(() => {
+      const o = parseFloat(splash.style.opacity);
+      if (o <= 0) {
+        clearInterval(fade);
+        splash.style.display = 'none';
 
-// Обработка форм контактов
-document.addEventListener("DOMContentLoaded", () => {
-  const forms = document.querySelectorAll(".contact-form");
+        const lang = localStorage.getItem('hvg-lang') || 'gr';
+        window.location.href = 'about.html';
+      } else {
+        splash.style.opacity = (o - 0.05).toString();
+      }
+    }, 40);
+  }
 
-  forms.forEach(form => {
-    const status = form.querySelector(".form-status");
+  setTimeout(showNextWord, 800);
 
-    form.addEventListener("submit", () => {
-      if (!status) return;
+  // CONTACT FORM AJAX + RESET
+  document.querySelectorAll('.contact-form').forEach(form => {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const status = form.querySelector('.form-status');
+      status.textContent = '';
+      const data = new FormData(form);
 
-      status.textContent = "Sending...";
-      setTimeout(() => {
-        form.reset();
-        status.textContent = "Message sent!";
-      }, 1500);
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(res => {
+        if (res.ok) {
+          form.reset();
+          status.textContent = 'Message sent';
+        } else {
+          status.textContent = 'Error';
+        }
+      }).catch(() => {
+        status.textContent = 'Error';
+      });
     });
   });
 });
