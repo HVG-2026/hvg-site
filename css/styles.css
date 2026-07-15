@@ -1,276 +1,280 @@
+/* ============================
+   HVG PARTNERS — PREMIUM STYLE
+   Black • Gold • Silver • White
+   ============================ */
+
 :root {
-  --bg: #000000;
-  --gold: #d4af37;
+  --black: #000000;
+  --white: #ffffff;
   --silver: #c0c0c0;
-  --text: #ffffff;
+  --gold: #d4af37;
+  --gold-light: #f5e4b0;
+  --gray-dark: #111111;
+  --gray-mid: #222222;
+  --transition: 0.3s ease;
 }
+
+/* ============================
+   GLOBAL
+   ============================ */
 
 body {
   margin: 0;
-  font-family: "Segoe UI", system-ui, sans-serif;
-  background: var(--bg);
-  color: var(--text);
+  padding: 0;
+  background: var(--black);
+  color: var(--silver);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* HEADER */
+h1, h2 {
+  color: var(--gold);
+  margin-bottom: 15px;
+}
+
+p {
+  color: var(--silver);
+  font-size: 18px;
+}
+
+/* ============================
+   CONTAINER
+   ============================ */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ============================
+   HEADER
+   ============================ */
 
 .site-header {
-  padding: 20px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  background: var(--gray-dark);
+  border-bottom: 1px solid var(--gold);
+  padding: 15px 0;
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
 }
 
 .logo img {
   height: 60px;
 }
 
-.main-nav a {
-  color: var(--text);
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: 500;
-}
+/* ============================
+   NAVIGATION
+   ============================ */
 
-.main-nav a.active {
-  color: var(--gold);
-  border-bottom: 2px solid var(--gold);
-}
-
-.lang-switch button {
-  background: none;
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  padding: 4px 10px;
-  margin-left: 5px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.lang-switch button[data-active="true"] {
-  background: var(--gold);
-  color: #000;
-}
-
-/* PAGE */
-
-.page {
-  padding: 30px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.section {
-  border: 1px solid var(--gold);
-  border-radius: 12px;
-  padding: 25px;
-  background: rgba(255,255,255,0.03);
-}
-
-.section h1 {
-  color: var(--gold);
-  margin-top: 0;
-}
-
-.section h2 {
-  color: var(--gold);
-  margin-top: 20px;
-}
-
-.steps {
-  margin: 10px 0 0;
-  padding-left: 20px;
-}
-
-.locations {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 8px;
+.main-nav ul {
   list-style: none;
-  padding: 0;
-  margin: 10px 0 0;
-}
-
-.locations li {
-  border: 1px solid var(--gold);
-  border-radius: 8px;
-  padding: 8px 10px;
-  text-align: center;
-}
-
-/* CONTACTS */
-
-.contact-info {
-  border: 1px solid var(--gold);
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 25px;
-  background: rgba(255,255,255,0.03);
-}
-
-.contact-form {
-  max-width: 480px;
-  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav a {
+  color: var(--silver);
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.main-nav a:hover {
+  color: var(--gold);
+}
+
+/* ============================
+   LANGUAGE SWITCH
+   ============================ */
+
+.lang-switch {
+  display: flex;
   gap: 10px;
 }
 
-.contact-form label {
-  font-weight: 500;
-}
-
-.contact-form input,
-.contact-form textarea {
-  background: #111;
-  border: 1px solid var(--gold);
-  border-radius: 6px;
-  padding: 8px 10px;
-  color: var(--text);
-}
-
-.contact-form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.contact-form button {
-  margin-top: 10px;
+.lang-switch button {
+  color: var(--black);
   background: var(--gold);
-  color: #000;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
   border: none;
-  border-radius: 6px;
-  padding: 10px 14px;
   cursor: pointer;
-  font-weight: 600;
+  transition: var(--transition);
 }
 
-.form-status {
-  margin-top: 8px;
-  font-size: 14px;
-  color: var(--gold);
+.lang-switch button:hover {
+  background: var(--gold-light);
 }
 
-/* SPLASH */
+/* ============================
+   SPLASH SCREEN
+   ============================ */
 
 #splash {
   position: fixed;
   inset: 0;
-  background: #000;
+  background: var(--black);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  opacity: 1;
+  transition: opacity 2s ease;
 }
 
 .splash-inner {
   text-align: center;
 }
 
+/* LOGO — премиальный эффект появления */
 .splash-logo {
-  height: 160px;
-  margin-bottom: 25px;
+  width: 180px;
+  opacity: 0;
+  transform: scale(0.95);
+  filter: drop-shadow(0 0 0px var(--gold));
+  animation: logoFadeIn 1.6s ease forwards;
 }
 
+@keyframes logoFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+    filter: drop-shadow(0 0 0px var(--gold));
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 12px var(--gold));
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.0);
+    filter: drop-shadow(0 0 4px var(--gold));
+  }
+}
+
+/* RINGS */
 .loader {
-  position: relative;
-  width: 140px;
-  height: 140px;
-  margin: 0 auto 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
 }
 
-.ring-gold,
-.ring-silver {
-  position: absolute;
-  width: 140px;
-  height: 140px;
+.ring {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  border: 5px solid transparent;
-}
-
-.ring-gold {
-  border-top-color: var(--gold);
-  border-left-color: var(--gold);
+  border: 4px solid transparent;
   animation: spin 2s linear infinite;
 }
 
-.ring-silver {
-  border-bottom-color: var(--silver);
-  border-right-color: var(--silver);
-  animation: spin-rev 2.5s linear infinite;
+.ring-gold {
+  border-color: var(--gold);
+  animation-direction: normal;
 }
 
+.ring-silver {
+  border-color: var(--silver);
+  animation-direction: reverse;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Words under logo */
 .splash-words {
-  height: 28px;
-  overflow: hidden;
-  color: var(--gold);
-  font-size: 20px;
-  font-weight: 600;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .splash-words span {
-  display: none;
+  color: var(--silver);
+  font-size: 16px;
+  opacity: 0;
+  animation: fadeWord 1.5s ease forwards;
 }
 
-/* RESPONSIVE */
+.splash-words span:nth-child(1) { animation-delay: 0.3s; }
+.splash-words span:nth-child(2) { animation-delay: 0.5s; }
+.splash-words span:nth-child(3) { animation-delay: 0.7s; }
+.splash-words span:nth-child(4) { animation-delay: 0.9s; }
+.splash-words span:nth-child(5) { animation-delay: 1.1s; }
+
+@keyframes fadeWord {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ============================
+   PAGE CONTENT
+   ============================ */
+
+.page {
+  padding: 60px 0;
+}
+
+.section {
+  margin-bottom: 60px;
+  padding: 40px;
+  background: var(--gray-mid);
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+
+.site-footer {
+  background: var(--gray-dark);
+  border-top: 1px solid var(--gold);
+  padding: 20px 0;
+  text-align: center;
+  color: var(--silver);
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
 
 @media (max-width: 768px) {
   .header-inner {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 20px;
   }
 
-  .logo img {
-    height: 50px;
-  }
-
-  .main-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .page {
-    padding: 20px 15px;
+  .main-nav ul {
+    flex-direction: column;
+    gap: 15px;
   }
 
   .section {
-    padding: 18px;
+    padding: 25px;
   }
-}
 
-/* ANIMATIONS */
+  h1 {
+    font-size: 26px;
+  }
 
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
+  h2 {
+    font-size: 22px;
+  }
 
-@keyframes spin-rev {
-  to { transform: rotate(-360deg); }
-}
-.contact-extra {
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.qr-left img {
-  width: 120px;
-  height: 120px;
-  border: 2px solid var(--gold);
-  border-radius: 10px;
-}
-
-.legal-center {
-  flex: 1;
-  text-align: center;
-  font-size: 14px;
-  color: var(--silver);
-  font-weight: 500;
+  p {
+    font-size: 16px;
+  }
 }
