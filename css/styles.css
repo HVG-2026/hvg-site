@@ -253,3 +253,24 @@ body {
 @keyframes spin-rev {
   to { transform: rotate(-360deg); }
 }
+.contact-extra {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.qr-left img {
+  width: 120px;
+  height: 120px;
+  border: 2px solid var(--gold);
+  border-radius: 10px;
+}
+
+.legal-center {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  color: var(--silver);
+  font-weight: 500;
+}
