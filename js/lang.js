@@ -10,6 +10,7 @@
     document.querySelectorAll('.lang').forEach(el => {
       el.style.display = el.classList.contains('lang-' + lang) ? '' : 'none';
     });
+
     document.querySelectorAll('.lang-switch button').forEach(btn => {
       const active = btn.getAttribute('data-lang') === lang;
       btn.setAttribute('data-active', active ? 'true' : 'false');
