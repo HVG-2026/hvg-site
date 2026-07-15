@@ -5,6 +5,8 @@
   --text: #ffffff;
 }
 
+/* GLOBAL */
+
 body {
   margin: 0;
   font-family: "Segoe UI", system-ui, sans-serif;
@@ -72,14 +74,10 @@ body {
   background: rgba(255,255,255,0.03);
 }
 
-.section h1 {
-  color: var(--gold);
-  margin-top: 0;
-}
-
+.section h1,
 .section h2 {
   color: var(--gold);
-  margin-top: 20px;
+  margin-top: 0;
 }
 
 .steps {
@@ -156,7 +154,7 @@ body {
   color: var(--gold);
 }
 
-/* SPLASH */
+/* SPLASH SCREEN */
 
 #splash {
   position: fixed;
@@ -169,19 +167,35 @@ body {
 }
 
 .splash-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  gap: 25px;
 }
 
 .splash-logo {
   height: 160px;
-  margin-bottom: 25px;
 }
+
+/* QR CODE */
+
+.qr-code {
+  width: 160px;
+}
+
+.qr-code svg {
+  width: 100%;
+  height: auto;
+}
+
+/* LOADER */
 
 .loader {
   position: relative;
   width: 140px;
   height: 140px;
-  margin: 0 auto 25px;
+  margin: 0 auto;
 }
 
 .ring-gold,
@@ -204,6 +218,8 @@ body {
   border-right-color: var(--silver);
   animation: spin-rev 2.5s linear infinite;
 }
+
+/* SPLASH WORDS */
 
 .splash-words {
   height: 28px;
@@ -241,6 +257,14 @@ body {
 
   .section {
     padding: 18px;
+  }
+
+  .splash-inner {
+    gap: 20px;
+  }
+
+  .qr-code {
+    width: 130px;
   }
 }
 
