@@ -1,59 +1,47 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const splash = document.getElementById('splash');
-  const words = splash.querySelectorAll('.splash-words span');
-  let index = 0;
+// ===============================
+//  HVG Partners — UI / Form Handler
+// ===============================
 
-  function showNextWord() {
-    words.forEach(w => w.style.display = 'none');
-    if (words[index]) {
-      words[index].style.display = 'inline';
-      index++;
-      setTimeout(showNextWord, 900);
-    } else {
-      setTimeout(finishSplash, 900);
-    }
+// Fade-in page on load
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.style.opacity = "0";
+  document.body.style.transition = "opacity 0.8s ease";
+
+  setTimeout(() => {
+    document.body.style.opacity = "1";
+  }, 200);
+});
+
+// Splash screen hide (если он есть)
+window.addEventListener("load", () => {
+  const splash = document.getElementById("splash");
+  if (splash) {
+    splash.style.opacity = "0";
+    splash.style.transition = "opacity 0.8s ease";
+
+    setTimeout(() => {
+      splash.style.display = "none";
+    }, 800);
   }
+});
 
-  function finishSplash() {
-    splash.style.opacity = '1';
-    const fade = setInterval(() => {
-      const o = parseFloat(splash.style.opacity);
-      if (o <= 0) {
-        clearInterval(fade);
-        splash.style.display = 'none';
+// Contact form handler
+document.addEventListener("DOMContentLoaded", () => {
+  const forms = document.querySelectorAll(".contact-form");
 
-        const lang = localStorage.getItem('hvg-lang') || 'gr';
-        window.location.href = 'about.html';
-      } else {
-        splash.style.opacity = (o - 0.05).toString();
-      }
-    }, 40);
-  }
+  forms.forEach(form => {
+    const status = form.querySelector(".form-status");
 
-  setTimeout(showNextWord, 800);
+    form.addEventListener("submit", (e) => {
+      if (!status) return;
 
-  // CONTACT FORM AJAX + RESET
-  document.querySelectorAll('.contact-form').forEach(form => {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const status = form.querySelector('.form-status');
-      status.textContent = '';
-      const data = new FormData(form);
+      status.textContent = "Sending...";
 
-      fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      }).then(res => {
-        if (res.ok) {
-          form.reset();
-          status.textContent = 'Message sent';
-        } else {
-          status.textContent = 'Error';
-        }
-      }).catch(() => {
-        status.textContent = 'Error';
-      });
+      // Auto-clear fields after sending
+      setTimeout(() => {
+        form.reset();
+        status.textContent = "Message sent!";
+      }, 1500);
     });
   });
 });
