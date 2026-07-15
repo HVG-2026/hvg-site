@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 150);
 });
 
-// Скрытие splash-экрана и загрузка стартовой страницы "Про нас" (GR)
+// Скрытие splash и переход на страницу "Про нас" (GR)
 window.addEventListener("load", () => {
   const splash = document.getElementById("splash");
   if (!splash) return;
@@ -18,17 +18,10 @@ window.addEventListener("load", () => {
   splash.style.transition = "opacity 1.2s ease";
   splash.style.opacity = "0";
 
-  // Удаление splash и показ стартовой страницы
   setTimeout(() => {
     splash.remove();
 
-    // Включаем греческий язык как стартовый
-    const langBlocks = document.querySelectorAll(".lang");
-    langBlocks.forEach(el => {
-      el.style.display = el.classList.contains("lang-gr") ? "" : "none";
-    });
-
-    // Если мы на index.html — автоматически показываем "Про нас"
+    // Автоматическая загрузка страницы "Про нас" на греческом
     if (window.location.pathname.endsWith("index.html") ||
         window.location.pathname.endsWith("/")) {
       window.location.href = "about.html?lang=gr";
