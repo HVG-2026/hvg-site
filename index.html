@@ -13,13 +13,56 @@
 <div id="splash">
   <div class="splash-inner">
 
+    <!-- ЛОГОТИП -->
     <img src="img/logo.png" class="splash-logo" alt="HVG Logo">
 
+    <!-- QR-КОД HVG (чёрно‑золотой стиль) -->
+    <div class="qr-code">
+        <svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 420 420">
+          <rect width="420" height="420" fill="#000000"/>
+
+          <!-- Золотая рамка -->
+          <rect x="10" y="10" width="400" height="400" fill="none" stroke="#d4af37" stroke-width="6"/>
+
+          <!-- QR-код -->
+          <g fill="#d4af37">
+            <rect x="40" y="40" width="100" height="100"/>
+            <rect x="60" y="60" width="60" height="60" fill="#000000"/>
+
+            <rect x="280" y="40" width="100" height="100"/>
+            <rect x="300" y="60" width="60" height="60" fill="#000000"/>
+
+            <rect x="40" y="280" width="100" height="100"/>
+            <rect x="60" y="300" width="60" height="60" fill="#000000"/>
+
+            <!-- Центральная матрица QR -->
+            <rect x="180" y="180" width="20" height="20"/>
+            <rect x="220" y="180" width="20" height="20"/>
+            <rect x="260" y="180" width="20" height="20"/>
+
+            <rect x="180" y="220" width="20" height="20"/>
+            <rect x="220" y="220" width="20" height="20"/>
+            <rect x="260" y="220" width="20" height="20"/>
+
+            <rect x="180" y="260" width="20" height="20"/>
+            <rect x="220" y="260" width="20" height="20"/>
+            <rect x="260" y="260" width="20" height="20"/>
+          </g>
+
+          <!-- Логотип HVG -->
+          <text x="210" y="360" font-size="42" fill="#d4af37" font-family="Arial" text-anchor="middle" letter-spacing="4">
+            HVG
+          </text>
+        </svg>
+    </div>
+
+    <!-- ЛОАДЕР -->
     <div class="loader">
       <div class="ring ring-gold"></div>
       <div class="ring ring-silver"></div>
     </div>
 
+    <!-- СЛОВА -->
     <div class="splash-words">
       <span>Reliability</span>
       <span>Prestige</span>
