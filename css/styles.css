@@ -255,11 +255,6 @@ body {
 }
 
 /* ANIMATIONS */
-@keyframes spin {
-  ...
-}
-
-/* ANIMATIONS */
 
 @keyframes spin {
   to { transform: rotate(360deg); }
