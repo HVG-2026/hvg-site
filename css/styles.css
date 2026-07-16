@@ -243,6 +243,21 @@ body {
     padding: 18px;
   }
 }
+/* QR CODE — уменьшенный фиксированный размер */
+.qr-left img {
+  width: 120px;
+  height: 120px;
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: contain;
+  border: 2px solid var(--gold);
+  border-radius: 10px;
+}
+
+/* ANIMATIONS */
+@keyframes spin {
+  ...
+}
 
 /* ANIMATIONS */
 
