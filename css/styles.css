@@ -252,4 +252,15 @@ body {
 
 @keyframes spin-rev {
   to { transform: rotate(-360deg); }
+  /* QR CODE — уменьшенный фиксированный размер */
+.qr-left img {
+  width: 90px;      /* уменьшенный размер */
+  height: 90px;
+  max-width: 90px;  /* запрет увеличения */
+  max-height: 90px;
+  object-fit: contain;
+  border: 2px solid var(--gold);
+  border-radius: 10px;
+}
+
 }
