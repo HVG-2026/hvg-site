@@ -249,7 +249,6 @@ body {
   height: 50px;
   max-width: 50px;
   max-height: 50px;
-  object-fit: contain;
   border: 2px solid var(--gold);
   border-radius: 10px;
 }
